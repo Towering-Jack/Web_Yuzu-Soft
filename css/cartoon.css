@@ -1,0 +1,181 @@
+.content {
+    text-align: center;
+}
+
+.content .menu {
+    position: relative;
+    z-index: 50;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 80rem;
+    margin: 0 auto;
+
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 20%);
+
+    cursor: pointer;
+
+    opacity: 0;
+    animation: appear1 .5s forwards;
+}
+
+.content .menu .btn {
+    width: 20rem;
+    height: 5rem;
+
+    color: #2a5298;
+    font-size: 18px;
+    line-height: 5rem;
+}
+
+.content .menu .btn:hover {
+    background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
+}
+
+.content .menu .btn:hover:first-child {
+    border-radius: 2rem 0 0 2rem;
+}
+
+.content .menu .btn:hover:last-child {
+    border-radius: 0 2rem 2rem 0;
+}
+
+.content .menu .btn ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content .menu .btn li {
+    height: 0;
+
+    color: #334433;
+    font-size: 14px;
+
+    border-radius: 2rem;
+
+    opacity: 0;
+    transform: translateY(-5rem);
+    transition: all .3s;
+}
+
+.content .menu .btn:hover li {
+    width: 18rem;
+    height: 5rem;
+
+    background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
+
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content .menu .btn li:hover {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+.container .games .characters>li {
+    padding-top: 5rem;
+
+    display: none;
+}
+
+.container .games .characters .left {
+    position: fixed;
+    width: 35rem;
+
+    opacity: 0;
+    transform: rotateY(60deg);
+    animation: appear2 1s forwards;
+}
+
+.container .games .characters .left h2 {
+    margin: 3rem auto;
+    color: #44B0cf;
+    font-size: 4rem;
+    font-family: YouYuan;
+    letter-spacing: 5px;
+}
+
+.container .games .characters .left img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 20%);
+}
+
+.container .games .characters .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 80rem;
+    margin-left: 40rem;
+
+    opacity: 0;
+    transform: scale(0.7);
+    animation: appear3 1s forwards;
+}
+
+.container .games .characters .right>ul {
+    display: flex;
+
+    width: 80rem;
+    height: 30rem;
+    margin-top: 5rem;
+    border: 2px solid skyblue;
+}
+
+.container .games .characters .right .item {
+    position: relative;
+
+    width: 8rem;
+    margin: 1rem;
+
+    border-radius: 3rem;
+
+    background-size: cover;
+    background-position: center;
+
+    /* 过渡效果：时长 贝塞尔曲线(速度曲线) */
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    cursor: pointer;
+}
+
+.container .games .characters .right .active {
+    flex: 1;
+
+    margin: 0;
+    border-radius: 4rem;
+}
+
+/* 文字补充说明 */
+.container .characters span {
+    margin-top: 2rem;
+
+    font-size: 15px;
+}
+
+@keyframes appear1 {
+    to {
+        opacity: 1;
+        transform: translateY(2rem);
+    }
+}
+
+@keyframes appear2 {
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+@keyframes appear3 {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

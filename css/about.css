@@ -1,0 +1,99 @@
+.content .container {
+    display: flex;
+    overflow: hidden;
+
+    width: 90rem;
+    height: 36rem;
+    margin-top: 6rem;
+
+    background-color: rgba(255, 255, 255, 60%);
+    border-radius: 3rem;
+    /* box-shadow:X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色 [投影方式] */
+    box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 20%);
+
+    opacity: 0;
+}
+
+.left {
+    float: left;
+    transform: translateX(10rem);
+}
+
+.right {
+    float: right;
+    transform: translateX(-10rem);
+}
+
+.content .container .pic {
+    width: 40%;
+    height: 100%;
+    background-color: skyblue;
+}
+
+.content .container .pic img {
+    width: 100%;
+    height: 100%;
+    /* 按照图片的比例放大或者缩小至充满容器 */
+    background-size: cover;
+}
+
+.content .container .word {
+    display: flex;
+    flex-direction: column;
+
+    width: 60%;
+    padding: 2rem;
+}
+
+.content h2 {
+    margin-bottom: 1.5rem;
+
+    color: #8fd3f4;
+    font-size: 3rem;
+    font-family: FangSong;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.content p {
+    color: #40A0A0;
+    font-size: 15px;
+    line-height: 1.6em;
+    text-indent: 2em;
+}
+
+.content strong {
+    color: #208080;
+}
+
+/* 设置出场动画 */
+.content .container:nth-child(1) {
+    animation: appear 2s forwards 0s;
+}
+
+.content .container:nth-child(2) {
+    animation: appear 2s forwards 1s;
+}
+
+.content .container:nth-child(3) {
+    animation: appear 2s forwards 2s;
+}
+
+.content .container:nth-child(4) {
+    animation: appear 2s forwards 3s;
+}
+
+.content .container:nth-child(5) {
+    animation: appear 2s forwards 4s;
+}
+
+.content .container:nth-child(6) {
+    animation: appear 2s forwards 5s;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

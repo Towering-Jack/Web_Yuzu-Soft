@@ -1,0 +1,190 @@
+.content {
+    text-align: center;
+}
+
+.content .menu {
+    position: relative;
+    z-index: 50;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 80rem;
+    margin: 0 auto;
+
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 20%);
+
+    cursor: pointer;
+
+    opacity: 0;
+    animation: appear1 .5s forwards;
+}
+
+.content .menu .btn {
+    width: 20rem;
+    height: 5rem;
+
+    color: #2a5298;
+    font-size: 18px;
+    line-height: 5rem;
+}
+
+.content .menu .btn:hover {
+    background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
+}
+
+.content .menu .btn:hover:first-child {
+    border-radius: 2rem 0 0 2rem;
+}
+
+.content .menu .btn:hover:last-child {
+    border-radius: 0 2rem 2rem 0;
+}
+
+.content .menu .btn ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content .menu .btn li {
+    height: 0;
+
+    color: #334433;
+    font-size: 14px;
+
+    border-radius: 2rem;
+
+    opacity: 0;
+    transform: translateY(-5rem);
+    transition: all .3s;
+}
+
+.content .menu .btn:hover li {
+    width: 18rem;
+    height: 5rem;
+
+    background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
+
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content .menu .btn li:hover {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+.tips {
+    position: relative;
+    left: -10rem;
+    top: 0;
+    z-index: 48;
+
+    width: 27rem;
+    height: 7rem;
+    padding: 1rem;
+
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 10%);
+
+    color: #32be84;
+    /* display: none; */
+}
+
+.container {
+    position: relative;
+    height: 28rem;
+    transform: translateY(-7rem);
+}
+
+.container .games .characters>li {
+    display: none;
+}
+
+.container .banner {
+    position: relative;
+    margin-top: 9rem;
+    cursor: pointer;
+}
+
+.container .banner>li {
+    position: absolute;
+    left: 0;
+
+    width: 50rem;
+
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 20%);
+    overflow: hidden;
+
+    opacity: 0;
+    transition-duration: .4s;
+}
+
+.container .banner img {
+    width: 50rem;
+}
+
+.iconfont {
+    color: white;
+    font-size: 8rem !important;
+    cursor: pointer;
+}
+
+.icon-arrow-left-bold {
+    position: absolute;
+    left: 0;
+    top: 10rem;
+    z-index: 45;
+}
+
+.icon-arrow-right-bold {
+    position: absolute;
+    right: 0;
+    top: 10rem;
+    z-index: 45;
+}
+
+/* 由js创造 */
+.sliders {
+    position: absolute;
+    bottom: -9rem;
+    left: 20rem;
+
+    display: flex;
+    justify-content: space-around;
+
+    width: 80rem;
+}
+
+.slider {
+    width: 6rem;
+    height: 1rem;
+
+    border-radius: 8px;
+    background-color: white;
+
+    cursor: pointer;
+}
+
+.slider:first-child {
+    background-color: #ebc0fd;
+}
+
+@keyframes appear1 {
+    to {
+        opacity: 1;
+        transform: translateY(2rem);
+    }
+}
+
+@keyframes appear2 {
+    to {
+        visibility: visible;
+        transform: rotate(0);
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/format.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+</head>
+
+<body>
+    <div class="header" id="header">
+        <a href="./index.html">
+            <ul class="logo">
+                <li><img src="../img/yuzusoftlogo.png" alt="" /></li>
+                <li>
+                    <h1>Yuzu-Soft</h1>
+                    <h1>柚子社</h1>
+                </li>
+            </ul>
+        </a>
+
+        <div class="nav">
+            <a href="./index.html">首页</a>
+            <a href="./about.html">了解更多</a>
+            <a href="./games.html">全部作品</a>
+            <a href="./video.html">OP鉴赏</a>
+            <a href="./character.html">角色立绘</a>
+            <a href="./cartoon.html">四格漫画</a>
+            <div class="navanim index"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="image" style="background-image: url('../img/indexPic/1.jpg')"></div>
+        <h4 class="text"><a href="./index.html">恭喜你打开了新世界的大门！</a></h4>
+
+        <div class="question">不知道从哪开始？(试试将鼠标移至刚刚消失的导航位置)</div>
+        <div class="image" style="background-image: url('../img/indexPic/2.jpg')"></div>
+        <h4 class="text"><a href="./about.html">点击这里了解更多信息</a></h4>
+
+        <div class="question">想知道柚子社的作品？</div>
+        <div class="image" style="background-image: url('../img/indexPic/3.jpg')"></div>
+        <h4 class="text"><a href="./games.html">点击这里查看全部作品</a></h4>
+
+        <div class="question">想直接观看视频？</div>
+        <div class="image" style="background-image: url('../img/indexPic/4.jpg')"></div>
+        <h4 class="text">
+            <a href="./video.html">点击这里欣赏近五部作品的OP</a>
+        </h4>
+
+        <div class="question">想看看画风如何？</div>
+        <div class="image" style="background-image: url('../img/indexPic/5.jpg')"></div>
+        <h4 class="text">
+            <a href="./character.html">点击这里欣赏近四部作品的角色立绘</a>
+        </h4>
+
+        <div class="question">有没有卡哇伊的表情包？</div>
+        <div class="image" style="background-image: url('../img/indexPic/6.jpg')"></div>
+        <h4 class="text">
+            <a href="./cartoon.html">点击这里欣赏近四部作品的卡通图片</a>
+        </h4>
+    </div>
+
+    <div class="footer">
+        <p>Copyright &copy; 2022 WEB前端大作业 All rights reservered.</p>
+        <p>author：CZR</p>
+    </div>
+
+    <!-- 当鼠标在导航栏时，显示导航栏 -->
+    <script>
+        var header = document.getElementById('header');
+        document.addEventListener('mousemove', function (e) {
+            var x = e.pageX;
+            var y = e.pageY;
+            if (y <= 100) {
+                header.style.opacity = '1';
+            } else {
+                header.style.opacity = '0';
+            }
+        })
+    </script>
+</body>
+
+</html>
